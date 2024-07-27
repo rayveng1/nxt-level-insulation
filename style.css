@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+:root{
+    --primary-color: #338ee6;
+}
+
+html{
+    font-family:"Lora";
+}
+
+
+nav{
+    padding: 1.5rem 7rem;
+}
+
+#main_logo{
+    max-height: 3.75rem;
+}
+
+.container{
+    padding: 0 7rem;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+
+.nav_links{
+    gap: 1rem;
+}
+
+.nav_link{
+    color: black;
+    font-size:x-large;
+    text-decoration: none;
+    font-weight: 675;
+}
+
+.card{
+    background-color: white;
+}
+
+#main_body{
+    background-color: var(--primary-color);
+}
+
+main.d-flex{
+    background-color: var(--primary-color);
+    min-height: 100rem;
+    flex:3;
+    border:purple 1rem solid;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+aside{
+    flex:1;
+    min-height: 100rem;
+    border:pink 1rem solid;
+}
