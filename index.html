@@ -5,35 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NXT Level Insulation</title>
     <meta name="description" content="NXT Level Insulation">
+    <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="d-flex">
-        <img id="main_logo" src="./Assets/Images/newlogo.png" alt="NXT Level Insulation Logo">
-        <div class="nav_links d-flex">
-            <a class="nav_link" href="#">Home</a>
-            <a class="nav_link" href="#">Solutions</a>
-            <a class="nav_link" href="#">Contact Us</a>
-        </div>
-    </nav>
-    <div id="main_body">
-        <div class="container d-flex">
-            <main class="container d-flex column">
-                <div class="d-flex card">
-
+    <section class="banner d-flex column">
+        <nav class="d-flex">
+            <img id="main_logo" src="./Assets/Images/logo_white.png" alt="NXT Level Insulation Logo">
+            <div class="nav_links d-flex">
+                <a class="nav_link" href="#">Services</a>
+                <a class="nav_link" href="#">Reviews</a>
+                <a class="nav_link" href="#">About Us</a>
+                <a class="nav_link" href="#">Contact</a>
+            </div>
+        </nav>
+        <h1>"<span class="elevate">Elevate</span> Your Home's Comfort and<br>Energy <span class="elevate">Efficiency</span>"</h1>
+        <button class="btn bg-blue-500/80 contact_us">Contact Us</button>
+    </section>
+    <main class="d-flex column ">
+        <section class="our_services d-flex column">
+            <h2 class="section_header">Our Services</h2>
+            <div class="service_cards d-flex column">
+                <div class="service_card_row d-flex">
+                    <div class="service_card d-flex column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)">
+                        <h3 class="service_title">Insulation Removal</h3>
+                    </div>
+                    <div class="service_card d-flex column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)">
+                        <h3 class="service_title">Insulation Replacement</h3>
+                    </div>
+                    <div class="service_card d-flex column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)">
+                        <h3 class="service_title">Radiant Barrier</h3>
+                    </div>
                 </div>
-                <div class="d-flex card">
-
+                <div class="service_card_row d-flex">
+                    <div class="service_card d-flex column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)">
+                        <h3 class="service_title">Air Sealing</h3>
+                    </div>
+                    <div class="service_card d-flex column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)">
+                        <h3 class="service_title">Attic Ventilation</h3>
+                    </div>
+                    <div class="service_card d-flex column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)">
+                        <h3 class="service_title">Rodent Proofing<br>\Sanitation</h3>
+                    </div>
                 </div>
-                <div class="d-flex card">
-
+            </div>
+        </section>
+        <section class="d-flex column insulation_info">
+            <div class="d-flex info_card">
+                <img class="info_img" src="./Assets/Images/placeholder.png" alt="how_insulation_will_save_money">
+                <div class="d-flex column all_info">
+                    <h3 class="section_header">How Insulation Will Save You Money</h3>
+                    <h4>Subheading</h4>
+                    <p>Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation 
+                        exquisite perfect nostrud nisi intricate Content. Qui  international first-class nulla ut. 
+                        Punctual adipisicing, essential lovely queen tempor eiusmod irure. Exclusive izakaya charming 
+                        Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. 
+                        Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. 
+                        Zürich sleepy perfect consectetur.</p>
                 </div>
-            </main>
-            <!-- <aside class="container">
-            
-            </aside> -->
-        </div>
-    </div>
+            </div>
+            <div class="d-flex info_card">
+                <div class="d-flex column all_info">
+                    <h3 class="section_header info_header">How We Provide Next Level Service</h3>
+                    <h4>Subheading</h4>
+                    <p>Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation 
+                        exquisite perfect nostrud nisi intricate Content. Qui  international first-class nulla ut. 
+                        Punctual adipisicing, essential lovely queen tempor eiusmod irure. Exclusive izakaya charming 
+                        Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. 
+                        Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. 
+                        Zürich sleepy perfect consectetur.</p>
+                </div>
+                <img class="info_img" src="./Assets/Images/placeholder.png" alt="how_insulation_will_save_money">
+            </div>
+        </section>
+        <section class="form_section">
+            <div class="d-flex column form_card">
+                <div class="d-flex column input_section">
+                    <label for="fname">Name</label>
+                    <input type="text" name="fname">
+                </div>
+                <div class="d-flex column input_section">
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname">
+                </div>
+                <div class="d-flex column input_section">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="d-flex column input_section">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone">
+                </div>
+                <div class="d-flex column input_section">
+                    <label for="message">Message</label>
+                    <textarea id="message_id" name="message" rows="4" cols="50"></textarea>
+                </div>
+                <button class="btn submit" onmouseover="turnBlack(this)" onmouseout="turnBlue(this)">Submit</button>
+            </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
 </body>
 </html>

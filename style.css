@@ -1,65 +1,194 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Inter:wght@100..900&family=Judson:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 :root{
     --primary-color: #338ee6;
+    --dark-grey:#ebebeb;
+    --darker-grey:#d9d9d9;
+    --black:#2c2c2c;
 }
 
 html{
-    font-family:"Lora";
+    font-family:"Inter";
 }
 
-
-nav{
-    padding: 1.5rem 7rem;
-}
-
-#main_logo{
-    max-height: 3.75rem;
-}
-
-.container{
-    padding: 0 7rem;
-}
-
+/* Utility Classes ---------------------------------------------------------------------------------------------------------------------- */
 .d-flex{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 
+.column{
+    flex-direction:column
+}
 
+.btn{
+    border-radius:.5rem;
+}
+
+/* Banner Section ---------------------------------------------------------------------------------------------------------------------- */
+
+.banner{
+    justify-content: flex-start;
+    gap: 2.5rem;
+    padding: 2rem 2rem;
+    min-height: 30rem;
+    background-image: url(./Assets/Images/attic.jpg);
+    background-size:cover;
+}
+
+nav{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#main_logo{
+    max-height: 3rem;
+}
+
+h1{
+    font-family: "Judson";
+    color:white;
+    font-size: 4rem;
+    text-align: center;
+    margin:0rem;
+    font-weight:100;
+    text-shadow: 1px 1px 1px black;
+}
+
+.elevate{
+    color:var(--primary-color);
+    font-family: "Bebas Neue";
+}
 
 .nav_links{
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .nav_link{
-    color: black;
-    font-size:x-large;
+    font-family: "Inter";
+    font-size:large;
+    color: white;
     text-decoration: none;
-    font-weight: 675;
 }
 
-.card{
+.contact_us{
+    color:white;
+    padding: .6rem .6rem;
+    font-size: large;
+    border:none;
+}
+
+/* Main Content ------------------------------------------------------------------------------------------------------------------ */
+main{
+}
+/* Our Services ---------------------------------------------------------------------------------------------------------------------- */
+
+
+.our_services{
+    padding: 4.25rem;
+    width: 100%;
+    gap: 2.5rem;
+    background-color: var(--dark-grey);
+}
+
+.section_header{
+    text-align: center;
+    font-size:xx-large;
+    font-weight:500;
+    margin:0rem;
+}
+
+.service_cards{
+    gap: 2.5rem;
+}
+
+.service_card_row{
+    gap: 2.5rem;
+    justify-content: space-between;
+    width:100%
+}
+
+.service_card{
+    background-color:var(--darker-grey);
+    padding: 1rem;
+    border-radius: .3rem;
+    min-height: 8rem;
+    min-width: 14rem;
+    justify-content: center;
+}
+
+.service_title{
+    font-weight: 600;
+}
+
+
+/* Insulation Info Cards ---------------------------------------------------------------------------------------------------------------------- */
+.insulation_info{
+    padding: 4.25rem;
+    gap:5rem;
+}
+
+.info_card{
+    gap:3rem;
+}
+
+.info_img{
+    flex:1;
+    background-color: grey;
+}
+
+.all_info{
+    flex:1;
+    align-items: flex-start;
+    gap:2rem;
+}
+
+/* Form Section ---------------------------------------------------------------------------------------------------------------------- */
+.form_section{
+    width: 100%;
+    background-color: var(--darker-grey);
+    padding: 4.25rem;
+}
+
+.form_card{
+    margin:0 auto;
+    width: 80%;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: .5rem;
     background-color: white;
 }
 
-#main_body{
-    background-color: var(--primary-color);
+.input_section{
+   gap:.25rem; 
+   width: 100%;
 }
 
-main.d-flex{
-    background-color: var(--primary-color);
-    min-height: 100rem;
-    flex:3;
-    border:purple 1rem solid;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 4rem;
+.input_section > label{
+    align-self: flex-start;
 }
 
-aside{
-    flex:1;
-    min-height: 100rem;
-    border:pink 1rem solid;
+.input_section > input{
+    padding: .5rem;
+    border-radius: .25rem;
+    border:.1rem lightgrey solid;
+    width: 100%;
+}
+
+#message_id{
+    border:.1rem lightgrey solid;
+    padding: .5rem;
+    border-radius: .25rem;
+    width: 100%;
+}
+
+.submit{
+    padding: .75rem;
+    color:white;
+    background-color:var(--primary-color);
+    width: 50%;
 }
