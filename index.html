@@ -12,16 +12,16 @@
 <body>
     <section class="banner d-flex column">
         <nav class="d-flex">
-            <img id="main_logo" src="./Assets/Images/logo_white.png" alt="NXT Level Insulation Logo">
+            <a href="http://127.0.0.1:5500/index.html"><img id="main_logo" src="./Assets/Images/logo_white.png" alt="NXT Level Insulation Logo"></a>
             <div class="nav_links d-flex">
-                <a class="nav_link" href="#">Services</a>
-                <a class="nav_link" href="#">Reviews</a>
-                <a class="nav_link" href="#">About Us</a>
-                <a class="nav_link" href="#">Contact</a>
+                <a class="nav_link" onmouseenter="hoverNavLink(this)" onmouseleave="unhoverNavLink(this) "href="http://127.0.0.1:5500/services.html">Services</a>
+                <a class="nav_link" onmouseenter="hoverNavLink(this)" onmouseleave="unhoverNavLink(this) "href="http://127.0.0.1:5500/index.html">Reviews</a>
+                <a class="nav_link" onmouseenter="hoverNavLink(this)" onmouseleave="unhoverNavLink(this) "href="http://127.0.0.1:5500/index.html">About Us</a>
+                <a class="nav_link" onmouseenter="hoverNavLink(this)" onmouseleave="unhoverNavLink(this) "href="#contact_us_form">Contact</a>
             </div>
         </nav>
-        <h1>"<span class="elevate">Elevate</span> Your Home's Comfort and<br>Energy <span class="elevate">Efficiency</span>"</h1>
-        <button class="btn bg-blue-500/80 contact_us">Contact Us</button>
+        <h1 class="title_header">"<span class="elevate">Elevate</span> Your Home's Comfort and<br>Energy <span class="elevate">Efficiency</span>"</h1>
+        <a class="btn bg-blue-500/80 contact_us" href="#contact_us_form">Contact Us</a>
     </section>
     <main class="d-flex column ">
         <section class="our_services d-flex column">
@@ -51,6 +51,31 @@
                 </div>
             </div>
         </section>
+        <section id="contact_us_form" class="form_section">
+            <div class="d-flex column form_card">
+                <div class="d-flex column input_section">
+                    <label for="fname">Name</label>
+                    <input type="text" name="fname">
+                </div>
+                <div class="d-flex column input_section">
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname">
+                </div>
+                <div class="d-flex column input_section">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="d-flex column input_section">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone">
+                </div>
+                <div class="d-flex column input_section">
+                    <label for="message">Message</label>
+                    <textarea id="message_id" name="message" rows="4" cols="50"></textarea>
+                </div>
+                <button class="btn submit" onmouseover="turnBlack(this)" onmouseout="turnBlue(this)">Submit</button>
+            </div>
+        </section>
         <section class="d-flex column insulation_info">
             <div class="d-flex info_card">
                 <img class="info_img" src="./Assets/Images/placeholder.png" alt="how_insulation_will_save_money">
@@ -77,31 +102,6 @@
                         Zürich sleepy perfect consectetur.</p>
                 </div>
                 <img class="info_img" src="./Assets/Images/placeholder.png" alt="how_insulation_will_save_money">
-            </div>
-        </section>
-        <section class="form_section">
-            <div class="d-flex column form_card">
-                <div class="d-flex column input_section">
-                    <label for="fname">Name</label>
-                    <input type="text" name="fname">
-                </div>
-                <div class="d-flex column input_section">
-                    <label for="lname">Last Name</label>
-                    <input type="text" name="lname">
-                </div>
-                <div class="d-flex column input_section">
-                    <label for="email">Email</label>
-                    <input type="email" name="email">
-                </div>
-                <div class="d-flex column input_section">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" name="phone">
-                </div>
-                <div class="d-flex column input_section">
-                    <label for="message">Message</label>
-                    <textarea id="message_id" name="message" rows="4" cols="50"></textarea>
-                </div>
-                <button class="btn submit" onmouseover="turnBlack(this)" onmouseout="turnBlue(this)">Submit</button>
             </div>
         </section>
     </main>
