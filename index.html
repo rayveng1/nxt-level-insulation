@@ -5,106 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NXT Level Insulation</title>
     <meta name="description" content="NXT Level Insulation">
+    <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" media="all" rel="stylesheet">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <section class="banner d-flex column">
-        <nav class="d-flex">
-            <a href="http://127.0.0.1:5500/index.html"><img id="main_logo" src="./Assets/Images/logo_white.png" alt="NXT Level Insulation Logo"></a>
-            <div class="nav_links d-flex">
-                <a class="nav_link" onmouseenter="hoverNavLink(this)" onmouseleave="unhoverNavLink(this) "href="http://127.0.0.1:5500/services.html">Services</a>
-                <a class="nav_link" onmouseenter="hoverNavLink(this)" onmouseleave="unhoverNavLink(this) "href="http://127.0.0.1:5500/index.html">Reviews</a>
-                <a class="nav_link" onmouseenter="hoverNavLink(this)" onmouseleave="unhoverNavLink(this) "href="http://127.0.0.1:5500/index.html">About Us</a>
-                <a class="nav_link" onmouseenter="hoverNavLink(this)" onmouseleave="unhoverNavLink(this) "href="#contact_us_form">Contact</a>
-            </div>
+    <nav class="navbar navbar-expand-md navbar-dark" id="nav">
+        <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">
+            <img id="main_logo" src="./Assets/Images/logo_white.png" alt="NXT Level Insulation Logo" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/services/services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/index.html">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:rgb(230, 230, 230)" href="#contact_us_form">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="banner d-flex flex-column" id="hero_banner">
+        <nav class="d-flex justify-content-between align-items-center" id="hero_nav">
+            <a href="http://127.0.0.1:5500/index.html">
+                <img id="main_logo" src="./Assets/Images/logo_white.png" alt="NXT Level Insulation Logo">
+            </a>
+            <ul class="navbar-nav flex-row gap-3 ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/services/services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/index.html">Reviews</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:rgb(230, 230, 230)" href="#contact_us_form">Contact</a>
+                </li>
+            </ul>
         </nav>
-        <h1 class="title_header">"<span class="elevate">Elevate</span> Your Home's Comfort and<br>Energy <span class="elevate">Efficiency</span>"</h1>
-        <a class="btn bg-blue-500/80 contact_us" href="#contact_us_form">Contact Us</a>
+        <h1 class="title_header text-center">"<span class="elevate">Elevate</span> Your Home's Comfort and<br>Energy <span class="elevate">Efficiency</span>"</h1>
+        <div class="text-center">
+            <a class="btn bg-blue-500/80 contact_us" href="#contact_us_form">Contact Us</a>
+        </div>
     </section>
-    <main class="d-flex column ">
-        <section class="our_services d-flex column">
-            <h2 class="section_header">Our Services</h2>
-            <div class="service_cards d-flex column">
-                <div class="service_card_row d-flex">
-                    <div class="service_card d-flex column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)">
-                        <h3 class="service_title">Insulation Removal</h3>
+    <main class="">
+        <section class="our_services">
+            <div class="container_set mx-auto">
+                <h2 class="section_header text-center">Our Services</h2>
+                <div class="row gx-3 mt-5">
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/insulation_removal.html';">
+                            <h3 class="service_title">Insulation Removal</h3>
+                        </div>
                     </div>
-                    <div class="service_card d-flex column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)">
-                        <h3 class="service_title">Insulation Replacement</h3>
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/insulation_replacement.html';">
+                            <h3 class="service_title">Insulation Replacement</h3>
+                        </div>
                     </div>
-                    <div class="service_card d-flex column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)">
-                        <h3 class="service_title">Radiant Barrier</h3>
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/radiant_barrier.html';">
+                            <h3 class="service_title">Radiant Barrier</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="service_card_row d-flex">
-                    <div class="service_card d-flex column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)">
-                        <h3 class="service_title">Air Sealing</h3>
+                <div class="row gx-3">
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/air_sealing.html';">
+                            <h3 class="service_title">Air Sealing</h3>
+                        </div>
                     </div>
-                    <div class="service_card d-flex column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)">
-                        <h3 class="service_title">Attic Ventilation</h3>
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/attic_ventilation.html';">
+                            <h3 class="service_title">Attic Ventilation</h3>
+                        </div>
                     </div>
-                    <div class="service_card d-flex column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)">
-                        <h3 class="service_title">Rodent Proofing<br>\Sanitation</h3>
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/rodent.html';">
+                            <h3 class="service_title">Rodent Proofing<br>Sanitation</h3>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="contact_us_form" class="form_section">
-            <div class="d-flex column form_card">
-                <div class="d-flex column input_section">
-                    <label for="fname">Name</label>
-                    <input type="text" name="fname">
+            <div class="mx-auto" style="max-width: 60rem;">
+                <!-- Custom padding to align the heading with the form -->
+                <h3 class="fs-3 mb-3 heading-aligned">Schedule a Free Consultation Today!</h3>
+                <h4 class="fs-5 mb-3 heading-aligned">East Texas/DFW: <span style="color:mediumblue">(469) 734-6904</span></h4>
+                <div class="form_card">
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="fname">First Name</label>
+                            <input type="text" class="form-control" name="fname">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="lname">Last Name</label>
+                            <input type="text" class="form-control" name="lname">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" name="phone">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="message">Message</label>
+                            <textarea id="message_id" class="form-control" name="message" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn submit w-100" onmouseover="turnBlack(this)" onmouseout="turnBlue(this)">Submit</button>
+                    </div>
                 </div>
-                <div class="d-flex column input_section">
-                    <label for="lname">Last Name</label>
-                    <input type="text" name="lname">
-                </div>
-                <div class="d-flex column input_section">
-                    <label for="email">Email</label>
-                    <input type="email" name="email">
-                </div>
-                <div class="d-flex column input_section">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" name="phone">
-                </div>
-                <div class="d-flex column input_section">
-                    <label for="message">Message</label>
-                    <textarea id="message_id" name="message" rows="4" cols="50"></textarea>
-                </div>
-                <button class="btn submit" onmouseover="turnBlack(this)" onmouseout="turnBlue(this)">Submit</button>
             </div>
         </section>
-        <section class="d-flex column insulation_info">
-            <div class="d-flex info_card">
-                <img class="info_img" src="./Assets/Images/placeholder.png" alt="how_insulation_will_save_money">
-                <div class="d-flex column all_info">
+        <section class="insulation_info container_set mx-auto">
+            <div class="row mb-4">
+                <div class="col-12 col-md-6">
+                    <img class="info_img img-fluid" src="./Assets/Images/placeholder.png" alt="how_insulation_will_save_money">
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
                     <h3 class="section_header">How Insulation Will Save You Money</h3>
                     <h4>Subheading</h4>
                     <p>Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation 
-                        exquisite perfect nostrud nisi intricate Content. Qui  international first-class nulla ut. 
+                        exquisite perfect nostrud nisi intricate Content. Qui international first-class nulla ut. 
                         Punctual adipisicing, essential lovely queen tempor eiusmod irure. Exclusive izakaya charming 
                         Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. 
                         Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. 
                         Zürich sleepy perfect consectetur.</p>
                 </div>
             </div>
-            <div class="d-flex info_card">
-                <div class="d-flex column all_info">
-                    <h3 class="section_header info_header">How We Provide Next Level Service</h3>
+            <div class="row">
+                <div class="col-12 col-md-6 order-md-2">
+                    <img class="info_img img-fluid" src="./Assets/Images/placeholder.png" alt="how_insulation_will_save_money">
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center order-md-1">
+                    <h3 class="section_header">How We Provide Next Level Service</h3>
                     <h4>Subheading</h4>
                     <p>Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation 
-                        exquisite perfect nostrud nisi intricate Content. Qui  international first-class nulla ut. 
+                        exquisite perfect nostrud nisi intricate Content. Qui international first-class nulla ut. 
                         Punctual adipisicing, essential lovely queen tempor eiusmod irure. Exclusive izakaya charming 
                         Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. 
                         Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. 
                         Zürich sleepy perfect consectetur.</p>
                 </div>
-                <img class="info_img" src="./Assets/Images/placeholder.png" alt="how_insulation_will_save_money">
             </div>
         </section>
     </main>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

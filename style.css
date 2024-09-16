@@ -43,13 +43,29 @@ html{
 nav{
     width: 100%;
     margin-bottom: 2rem;
+    /* position:fixed; */
 }
+
+.heading-aligned {
+    padding-left: 39px; /* Match Bootstrap's form control padding */
+}
+
+@media (min-width: 768px) {
+    .heading-aligned {
+        padding-left: 95px; /* Match padding for larger screens */
+    }
+}
+
 
 .navbar{
     background-color: black;
     padding: 2rem;
-    top:-1.75rem;
-    position:sticky;
+    top:0;
+    position:fixed;
+}
+
+.nav{
+    display:none !important;
 }
 
 #main_logo{
@@ -72,6 +88,10 @@ nav{
     font-family: "Bebas Neue";
 }
 
+.container_set{
+    max-width: 80rem;
+}
+
 .nav_links{
     gap: 2rem;
 }
@@ -89,6 +109,11 @@ nav{
     padding: .6rem .6rem;
     font-size: large;
     border:none;
+}
+
+.nav.past-main {
+    background-color:#fff;
+    color:#444;
 }
 
 /* Main Content ------------------------------------------------------------------------------------------------------------------ */
@@ -137,7 +162,7 @@ main{
 
 /* Insulation Info Cards ---------------------------------------------------------------------------------------------------------------------- */
 .insulation_info{
-    padding: 4.25rem;
+    padding: 4.25rem 0;
     gap:5rem;
 }
 
