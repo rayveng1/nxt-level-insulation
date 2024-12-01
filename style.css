@@ -50,6 +50,7 @@ nav{
     /* position:fixed; */
 }
 
+
 .heading-aligned {
     padding-left: 39px; /* Match Bootstrap's form control padding */
 }
@@ -106,6 +107,7 @@ nav{
     color: white;
     text-decoration: none;
     font-weight: 300;
+    cursor: pointer;
 }
 
 .contact_us{
