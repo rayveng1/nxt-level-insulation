@@ -26,14 +26,14 @@
                 <li class="nav-item">
                     <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/index.html">Home</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/index.html">Reviews</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/about.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/index.html">Contact</a>
+                    <a class="nav-link" style="color:rgb(230, 230, 230)" href="#contact_us_form">Contact</a>
                 </li>
             </ul>
         </div>
@@ -47,7 +47,7 @@
 
         <div class="row mb-4">
             <div class="col-md-6">
-                <img class="img-fluid service_img" src="../Assets/DONOTUSEINWEBSITE/vacuum.jpg" alt="Insulation Removal">
+                <img class="img-fluid service_img" src="../Assets/Images/removal.jpeg" alt="Insulation Removal">
             </div>
             <div class="col-md-6">
                 <h2><strong>Insulation Removal</strong></h2>
@@ -63,7 +63,7 @@
 
         <div class="row mb-4">
             <div class="col-md-6 order-md-2">
-                <img class="img-fluid service_img" src="../Assets/Images/pink_attic.jpg" alt="Insulation Replacement">
+                <img class="img-fluid service_img" src="../Assets/Images/insulation_1.jpeg" alt="Insulation Replacement">
             </div>
             <div class="col-md-6 order-md-1">
                 <h2><strong>Insulation Replacement</strong></h2>
@@ -79,7 +79,7 @@
 
         <div class="row mb-4">
             <div class="col-md-6">
-                <img class="img-fluid service_img" src="../Assets/DONOTUSEINWEBSITE/radiant.jpg" alt="Radiant Barrier">
+                <img class="img-fluid service_img" src="../Assets/Images/radiant.jpeg" alt="Radiant Barrier">
             </div>
             <div class="col-md-6">
                 <h2><strong>Radiant Barrier</strong></h2>
@@ -95,7 +95,7 @@
 
         <div class="row mb-4">
             <div class="col-md-6 order-md-2">
-                <img class="img-fluid service_img" src="../Assets/DONOTUSEINWEBSITE/airseal.webp" alt="Air Sealing">
+                <img class="img-fluid service_img" src="../Assets/Images/sealing.jpeg" alt="Air Sealing">
             </div>
             <div class="col-md-6 order-md-1">
                 <h2><strong>Air Sealing</strong></h2>
@@ -130,35 +130,65 @@
             <!-- Custom padding to align the heading with the form -->
             <h3 class="fs-3 mb-3 heading-aligned">Schedule a Free Consultation Today!</h3>
             <h4 class="fs-5 mb-3 heading-aligned">East Texas/DFW: <span style="color:mediumblue">(469) 734-6904</span></h4>
-            <div class="form_card">
-                <div class="row">
-                    <div class="col-12 col-md-6 mb-3">
-                        <label for="fname">First Name</label>
-                        <input type="text" class="form-control" name="fname">
+            <form class="form_card"
+                action="https://formspree.io/f/xrbgabzb"
+                method="POST">
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="fname">First Name</label>
+                            <input type="text" class="form-control" name="fname">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="lname">Last Name</label>
+                            <input type="text" class="form-control" name="lname">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" name="phone">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="message">How can we help you?</label>
+                            <textarea id="message_id" class="form-control" name="message" rows="4"></textarea>
+                        </div>
                     </div>
-                    <div class="col-12 col-md-6 mb-3">
-                        <label for="lname">Last Name</label>
-                        <input type="text" class="form-control" name="lname">
+                    <div class="text-center">
+                        <button class="btn submit w-100" onmouseover="turnBlack(this)" onmouseout="turnBlue(this)">Submit</button>
                     </div>
-                    <div class="col-12 col-md-6 mb-3">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email">
-                    </div>
-                    <div class="col-12 col-md-6 mb-3">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" name="phone">
-                    </div>
-                    <div class="col-12 mb-3">
-                        <label for="message">Message</label>
-                        <textarea id="message_id" class="form-control" name="message" rows="4"></textarea>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <button class="btn submit w-100" onmouseover="turnBlack(this)" onmouseout="turnBlue(this)">Submit</button>
-                </div>
-            </div>
+                </form>
         </div>
     </section>
+    <footer class="border-top p-4">
+        <div class="row">
+            <div class="col-4">
+                <img src="../Assets/Images/logo_black.png" alt="NXT Level Insulation Logo" style="max-width: 15rem;">
+                <div class="d-flex justify-content-start gap-2">
+                <a href="https://www.google.com/search?q=nxt+level+insulation+marshall+tx&sca_esv=5c282f3ea9179411&sxsrf=ADLYWIJVvdPZBnkcdA2aP6fVNrnjZ5I6Sg%3A1726460266094&ei=arHnZrOtBePIptQP8Lef8Qg&ved=0ahUKEwizioTXzcaIAxVjpIkEHfDbJ44Q4dUDCBA&uact=5&oq=nxt+level+insulation+marshall+tx&gs_lp=Egxnd3Mtd2l6LXNlcnAiIG54dCBsZXZlbCBpbnN1bGF0aW9uIG1hcnNoYWxsIHR4MgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKsCMgUQIRifBUjDEVCcAli7EHABeAGQAQGYAc0BoAGRC6oBBjAuMTEuMbgBA8gBAPgBAZgCDKAC3AnCAgoQABiwAxjWBBhHwgIGEAAYFhgewgILEAAYgAQYhgMYigXCAggQABiABBiiBMICCBAAGKIEGIkFmAMAiAYBkAYIkgcEMS4xMaAHu08&sclient=gws-wiz-serp"><img src="../Assets/Images/google-logo.svg" alt="Google Icon - NXT Level Insulation Google Page" style="height: 1.4rem;" class="mt-2" on></a>
+                <a href="https://www.homeadvisor.com/rated.TruBuildInsulation.137212787.html"><img src="../Assets/Images/pngfind.com-home-advisor-logo-png-5988144.png" alt="Home Advisor Icon - NXT Level Insulation Page" style="height: 1.4rem;" class="mt-2" on></a>
+            </div>
+            </div>
+            <div class="col-4">
+                <div class="mx-auto">
+                    <h5 class="mb-4 fs-5 fw-semibold" >Services</h5>
+                    <a class="d-block mb-2" style="text-decoration: none; color: black;" href="./services/insulation_replacement.html">Insulation Replacement</a>
+                    <a class="d-block mb-2" style="text-decoration: none; color: black;" href="./services/insulation_removal.html">Insulation Removal</a>
+                    <a class="d-block mb-2" style="text-decoration: none; color: black;" href="./services/air_sealing.html">Air Sealing</a>
+                    <a class="d-block mb-2" style="text-decoration: none; color: black;" href="./services/attic_ventilation.html">Attic Ventilation</a>
+                    <a class="d-block mb-2" style="text-decoration: none; color: black;" href="./services/radiant_barrier.html">Radiant Barrier</a>
+                    <a class="d-block mb-2" style="text-decoration: none; color: black;" href="./services/rodent.html">Rodent Removal and Sanitation</a>
+                    <a class="d-block mb-2" style="text-decoration: none; color: black;" href="./services/services.html">Services</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <h5 class="mb-4 fs-5 fw-semibold" >Navigation</h5>
+                <a class="d-block mb-2" style="text-decoration: none; color: black;" href="./about.html">About Us</a>
+                <a class="d-block mb-2" style="text-decoration: none; color: black;" href="#contact_us_form">Contact Us</a>
+            </div>
+        </div>
+    </footer>
     <script src="../script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>

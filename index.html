@@ -25,9 +25,9 @@
                 <li class="nav-item">
                     <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/services/services.html">Services</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/index.html">Reviews</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/about.html">About Us</a>
                 </li>
@@ -46,9 +46,9 @@
                 <li class="nav-item">
                     <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/services/services.html">Services</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/index.html">Reviews</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" style="color:rgb(230, 230, 230)" href="http://127.0.0.1:5500/about.html">About Us</a>
                 </li>
@@ -69,33 +69,39 @@
                 <div class="row gx-3 mt-5">
                     <div class="col-lg-4 col-md-4 mb-4">
                         <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/insulation_removal.html';">
+                            <img src="Assets/Icons/removal_icon.png" alt="removal_icon">
                             <h3 class="service_title">Insulation Removal</h3>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 mb-4">
                         <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/insulation_replacement.html';">
+                            <img src="Assets/Icons/replacement.png" alt="removal_icon">
                             <h3 class="service_title">Insulation Replacement</h3>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 mb-4">
-                        <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/radiant_barrier.html';">
-                            <h3 class="service_title">Radiant Barrier</h3>
+                        <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/attic_ventilation.html';">
+                            <img src="Assets/Icons/ventilation_icon.png" alt="removal_icon">
+                            <h3 class="service_title">Attic Ventilation</h3>
                         </div>
                     </div>
                 </div>
                 <div class="row gx-3">
                     <div class="col-lg-4 col-md-4 mb-4">
                         <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/air_sealing.html';">
+                            <img src="Assets/Icons/sealing_icon.png" alt="removal_icon">
                             <h3 class="service_title">Air Sealing</h3>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 mb-4">
-                        <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/attic_ventilation.html';">
-                            <h3 class="service_title">Attic Ventilation</h3>
+                        <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/radiant_barrier.html';">
+                            <img src="Assets/Icons/radiant_icon.png" alt="removal_icon">
+                            <h3 class="service_title">Radiant Barrier</h3>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 mb-4">
                         <div class="service_card d-flex flex-column" onmouseover="turnBlue(this)" onmouseout="turnGrey(this)" onclick="location.href='services/rodent.html';">
+                            <img src="Assets/Icons/rodent.png" alt="removal_icon">
                             <h3 class="service_title">Rodent Proofing<br>Sanitation</h3>
                         </div>
                     </div>
@@ -107,7 +113,9 @@
                 <!-- Custom padding to align the heading with the form -->
                 <h3 class="fs-3 mb-3 heading-aligned">Schedule a Free Consultation Today!</h3>
                 <h4 class="fs-5 mb-3 heading-aligned">East Texas/DFW: <span style="color:mediumblue">(469) 734-6904</span></h4>
-                <div class="form_card">
+                <form class="form_card"
+                action="https://formspree.io/f/xrbgabzb"
+                method="POST">
                     <div class="row">
                         <div class="col-12 col-md-6 mb-3">
                             <label for="fname">First Name</label>
@@ -126,45 +134,109 @@
                             <input type="tel" class="form-control" name="phone">
                         </div>
                         <div class="col-12 mb-3">
-                            <label for="message">Message</label>
+                            <label for="message">How can we help you?</label>
                             <textarea id="message_id" class="form-control" name="message" rows="4"></textarea>
                         </div>
                     </div>
                     <div class="text-center">
                         <button class="btn submit w-100" onmouseover="turnBlack(this)" onmouseout="turnBlue(this)">Submit</button>
                     </div>
-                </div>
+                </form>
             </div>
         </section>
         <section class="insulation_info container_set mx-auto">
             <div class="row mb-4">
-                <div class="col-12 col-md-6">
-                    <img class="info_img img-fluid" src="./Assets/Images/placeholder.png" alt="how_insulation_will_save_money">
+                <div class="col-12 col-md-6 d-flex">
+                    <img class="info_img img-fluid" src="./Assets/Images/savings.jpg" alt="how_insulation_will_save_money">
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-                    <h3 class="section_header">How Insulation Will Save You Money</h3>
-                    <h4>Subheading</h4>
-                    <p>Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation 
-                        exquisite perfect nostrud nisi intricate Content. Qui international first-class nulla ut. 
-                        Punctual adipisicing, essential lovely queen tempor eiusmod irure. Exclusive izakaya charming 
-                        Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. 
-                        Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. 
-                        Zürich sleepy perfect consectetur.</p>
+                    <h3 class="section_header mb-3">How Insulation Will Save You Money</h3>
+                    <ul class="px-3">
+                        <li>
+                            <strong>Energy Efficiency:</strong>
+                            <ul class="px-4 py-2" style="list-style: disc;">
+                                <li>
+                                    Proper insulation keeps your home warmer in the winter and cooler in the summer, reducing the need for heating and cooling systems to work overtime.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Lower Energy Bills:</strong>
+                            <ul class="px-4 py-2" style="list-style: disc;">
+                                <li>
+                                    By minimizing energy loss, well-insulated homes can lead to significantly lower utility bills, often making up for the initial cost of insulation over time.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Reduced Wear on Systems:</strong>
+                            <ul class="px-4 py-2" style="list-style: disc;">
+                                <li>
+                                    With less strain on your heating and cooling systems, you may face fewer repairs and a longer lifespan for your HVAC equipment.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Increased Home Value:</strong>
+                            <ul class="px-4 py-2" style="list-style: disc;">
+                                <li>
+                                    Energy-efficient homes can be more attractive to buyers, potentially increasing your property’s resale value.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-6 order-md-2">
-                    <img class="info_img img-fluid" src="./Assets/Images/placeholder.png" alt="how_insulation_will_save_money">
+                <div class="col-12 col-md-6 order-md-2 d-flex">
+                    <img class="info_img img-fluid" src="./Assets/Images/dillon.jpg" alt="how_insulation_will_save_money">
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column justify-content-center order-md-1">
-                    <h3 class="section_header">How We Provide Next Level Service</h3>
-                    <h4>Subheading</h4>
-                    <p>Excepteur efficient emerging, minim veniam anim aute carefully curated Ginza conversation 
-                        exquisite perfect nostrud nisi intricate Content. Qui international first-class nulla ut. 
-                        Punctual adipisicing, essential lovely queen tempor eiusmod irure. Exclusive izakaya charming 
-                        Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. 
-                        Qui wardrobe aliquip, et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. 
-                        Zürich sleepy perfect consectetur.</p>
+                    <h3 class="section_header mb-3">How We Provide Next Level Service</h3>
+                    <ul class="px-3">
+                        <li>
+                            <strong>Personalized Consultations:</strong>
+                            <ul class="px-4 py-2" style="list-style: disc;">
+                                <li>
+                                    Our journey begins with a thorough consultation, where we assess your specific needs and offer tailored solutions that fit your home and budget.Our journey begins with a thorough consultation, where we assess your specific needs and offer tailored solutions that fit your home and budget.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Expert Assessments:</strong>
+                            <ul class="px-4 py-2" style="list-style: disc;">
+                                <li>
+                                    Our team conducts detailed energy audits to identify areas for improvement, ensuring we maximize your home’s efficiency.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Skilled Installation:</strong>
+                            <ul class="px-4 py-2" style="list-style: disc;">
+                                <li>
+                                    Our trained professionals handle every installation with precision and care, adhering to industry standards and best practices to ensure optimal results.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Post-Installation Support:</strong>
+                            <ul class="px-4 py-2" style="list-style: disc;">
+                                <li>
+                                    We don’t just walk away after the job is done. Our commitment to customer satisfaction means we’re available for follow-up questions and support, ensuring you’re happy with your investment.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Sustainability Focus:</strong>
+                            <ul class="px-4 py-2" style="list-style: disc;">
+                                <li>
+                                    We are passionate about eco-friendly practices, offering solutions that not only enhance your home but also benefit the environment
+                                </li>
+                            </ul>
+                        </li>
+                       
+                    </ul>
                 </div>
             </div>
         </section>
@@ -175,6 +247,7 @@
                     <div class="d-flex justify-content-start gap-2">
                     <a href="https://www.google.com/search?q=nxt+level+insulation+marshall+tx&sca_esv=5c282f3ea9179411&sxsrf=ADLYWIJVvdPZBnkcdA2aP6fVNrnjZ5I6Sg%3A1726460266094&ei=arHnZrOtBePIptQP8Lef8Qg&ved=0ahUKEwizioTXzcaIAxVjpIkEHfDbJ44Q4dUDCBA&uact=5&oq=nxt+level+insulation+marshall+tx&gs_lp=Egxnd3Mtd2l6LXNlcnAiIG54dCBsZXZlbCBpbnN1bGF0aW9uIG1hcnNoYWxsIHR4MgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigATIFECEYoAEyBRAhGKsCMgUQIRifBUjDEVCcAli7EHABeAGQAQGYAc0BoAGRC6oBBjAuMTEuMbgBA8gBAPgBAZgCDKAC3AnCAgoQABiwAxjWBBhHwgIGEAAYFhgewgILEAAYgAQYhgMYigXCAggQABiABBiiBMICCBAAGKIEGIkFmAMAiAYBkAYIkgcEMS4xMaAHu08&sclient=gws-wiz-serp"><img src="./Assets/Images/google-logo.svg" alt="Google Icon - NXT Level Insulation Google Page" style="height: 1.4rem;" class="mt-2" on></a>
                     <a href="https://www.homeadvisor.com/rated.TruBuildInsulation.137212787.html"><img src="Assets/Images/pngfind.com-home-advisor-logo-png-5988144.png" alt="Home Advisor Icon - NXT Level Insulation Page" style="height: 1.4rem;" class="mt-2" on></a>
+                    <a href="https://www.yelp.com/biz/nxt-level-insulation-marshall?uid=u_y5MYmtG1CmONjapWtE3w&utm_source=ishare"><img src="Assets/Icons/yelp_logo.png" alt="Yelp Advisor - NXT Level Insulation Page" style="height: 1.4rem;" class="mt-2" on></a>
                 </div>
                 </div>
                 <div class="col-4">

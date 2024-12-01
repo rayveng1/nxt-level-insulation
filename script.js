@@ -10,7 +10,7 @@ function turnBlack(element){
 }
 
 function turnGrey(element){
-    element.style.backgroundColor = "var(--darker-grey)";
+    element.style.backgroundColor = "";
 
 }
 
