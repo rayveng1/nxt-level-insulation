@@ -1,10 +1,10 @@
 function turnBlue(element){
-    element.style.backgroundColor = "var(--primary-color-2)";
+    element.style.backgroundColor = "var(--primary-color)";
 
 }
 
-function turnBlue1(element){
-    element.style.backgroundColor = "var(--primary-color)";
+function turnBlue2(element){
+    element.style.backgroundColor = "var(--primary-color-2)";
 
 }
 
