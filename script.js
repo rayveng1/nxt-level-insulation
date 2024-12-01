@@ -3,6 +3,11 @@ function turnBlue(element){
 
 }
 
+function turnBlue1(element){
+    element.style.backgroundColor = "var(--primary-color)";
+
+}
+
 function turnBlack(element){
     element.style.color = "white"
     element.style.backgroundColor = "var(--black)";
