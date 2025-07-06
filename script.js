@@ -50,3 +50,7 @@ $(window).on('scroll',function(){
    }
 
 });
+
+
+
+var alpha = 'f'
