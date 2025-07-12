@@ -30,27 +30,42 @@ function unhoverNavLink(element){
     
 }
 
-// get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
-var mainbottom = $('#hero_nav').offset().top + $('#hero_nav').height();
+if (document.getElementById('hero_nav')){
+    // get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
+    var mainbottom = $('#hero_nav').offset().top + $('#hero_nav').height();
+    window.onload = function() {
+        // Select the element by its ID (or class, tag, etc.)
+        document.getElementById("nav").style.display = "none";
+    };
 
-window.onload = function() {
-    // Select the element by its ID (or class, tag, etc.)
-    document.getElementById("nav").style.display = "none";
-};
+    // on scroll, 
+    $(window).on('scroll',function(){
+        // we round here to reduce a little workload
+        stop = Math.round($(window).scrollTop());
+        if (stop < mainbottom) {
+            document.getElementById("nav").style.display = "flex";
+            $('#nav').addClass('nav');
+        } else {
+            $('#nav').removeClass('nav');
+    }
 
-// on scroll, 
-$(window).on('scroll',function(){
-    // we round here to reduce a little workload
-    stop = Math.round($(window).scrollTop());
-    if (stop < mainbottom) {
-        document.getElementById("nav").style.display = "flex";
-        $('#nav').addClass('nav');
-    } else {
-        $('#nav').removeClass('nav');
-   }
+    });
+}
 
+
+document.getElementById('SubmissionForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Stop form submission temporarily
+  
+  gtag('event', 'conversion', {
+    'send_to': 'AW-17027632846',
+    'event_callback': function() {
+      // Submit the form after tracking
+      e.target.submit();
+    }
+  });
+
+  // Fallback in case callback doesn't fire (e.g., ad blockers)
+  setTimeout(function() {
+    e.target.submit();
+  }, 1000);
 });
-
-
-
-var alpha = 'f'
