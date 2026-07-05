@@ -159,6 +159,7 @@ main{
     min-height: 8rem;
     min-width: 14rem;
     justify-content: center;
+    cursor: pointer;
 }
 
 .service_title{
