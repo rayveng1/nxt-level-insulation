@@ -56,14 +56,6 @@ if (document.getElementById('hero_nav')){
 document.getElementById('SubmissionForm').addEventListener('submit', function(e) {
   e.preventDefault(); // Stop form submission temporarily
   
-  gtag('event', 'conversion', {
-    'send_to': 'AW-17027632846',
-    'event_callback': function() {
-      // Submit the form after tracking
-      e.target.submit();
-    }
-  });
-
   // Fallback in case callback doesn't fire (e.g., ad blockers)
   setTimeout(function() {
     e.target.submit();
